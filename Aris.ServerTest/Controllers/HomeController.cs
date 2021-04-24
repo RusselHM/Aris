@@ -30,6 +30,11 @@ namespace Aris.ServerTest.Controllers
             return View(viewModel);
         }
 
+        public async Task<IActionResult> Categories(string cat1, string cat2, string returnUrl)
+        {
+          
+        }
+
         public async Task<IActionResult> Details(string game, string returnUrl)
         {
             var base64EncodedBytes = System.Convert.FromBase64String(game);

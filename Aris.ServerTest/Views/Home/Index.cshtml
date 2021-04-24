@@ -112,4 +112,13 @@
 
 @section Scripts {
     <script src="~/js/games.js"></script>
+<script>
+    $(document).ready(function (e) {
+        $.getJSON("http://v3/api/users/{user_id}/tags?categories={cat1},{cat2}", function (data) {
+            $.each(data, function (index, value) {
+                $("#category-filter").append("<option value=" + value.name + ">" + value.category + "</option>");
+            });
+        });
+    })
+</script>
 }
