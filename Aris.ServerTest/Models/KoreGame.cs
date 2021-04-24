@@ -10,6 +10,11 @@ namespace Aris.ServerTest.Models
         [JsonProperty("games")]
         public List<KoreGame> Games { get; set; }
     }
+    public class Attribute
+    {
+        public string Lines { get; set; }
+        public bool Free_Spins { get; set; }
+    }
 
     public class KoreGame
     {
@@ -39,6 +44,9 @@ namespace Aris.ServerTest.Models
 
         [JsonProperty("locale")]
         public string Locale { get; set; }
+
+        [JsonProperty]
+        public Attribute Attributes { get; set; }
 
         [JsonProperty("_actions")]
         public Dictionary<string, KoreLink> Actions { get; set; }
